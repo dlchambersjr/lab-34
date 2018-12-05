@@ -63,4 +63,4 @@ TBD
 * Testing needs to be done still
 
 #### UML
-[Remote Crud](UML LINK HERE - Will be hot-fixed in GITHUB)
+[Remote Crud](https://raw.githubusercontent.com/dlchambersjr/lab-34/master/lab-34-uml.jpg)
