@@ -1,42 +1,66 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+## Remote Crud
 
-## Project Name
-
-### Author: Student/Group Name
+### Author: David Chambers/John Cokos
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com)
-* [front-end](http://xyz.com)
+* [repo](https://github.com/dlchambersjr/lab-34)
+* [front-end](https://codesandbox.io/s/x3n8vym964)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### `index.js` -> <App/>
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### store/`index.js` -> Redux Store
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `combineReducers(arity *) -> obeject with properties of different states`
+Creates the necessary object to reference the store through a property.
 
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+###### `store -> store for global consumption`
+Makes the reducers and middleware available to the app.
+
+#### store/middleware/`reporter.js` -> logs actions/reducers/state
+
+#### component/`app.js` -> renders <RecordList/> from list.js
+
+#### component/`list.js` -> renders player-model-data and <Record/> from record.js
+
+###### `deleteRecord(id)` -> returns updated state after delete
+Deletes the record at position ID.
+
+###### `edit(id)` -> returns updated state after edit and POST
+Edits the selected ID
+
+###### `reset()` -> clears the form for new input
+Prepares the form to receive new data to be posted.
+
+#### component/record/`record.js` -> renders the form from redux <Form/>
+
+###### `componentDidMount()` -> schema from the API
+Load the schema from the API into state
+
+###### `resetPlayer(id)` -> TBD
+TBD
+
+###### `handleSubmit(form)` -> data to be posted on API and in state
+Posts the form to the API and to state
+
+#### component/record/`action.js` -> information to be updated via api and state
+
+###### `TBD()` -> TBD
+TBD
+
+#### component/record/`reducers.js` -> modifies the store
+
+###### `TBD()` -> TBD
+TBD
+
+
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+
 
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Testing needs to be done still
 
 #### UML
-Link to an image of the UML for your application and response to events
+[Remote Crud](UML LINK HERE - Will be hot-fixed in GITHUB)
